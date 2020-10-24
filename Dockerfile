@@ -2,7 +2,7 @@ FROM fithwum/debian-base:stretch
 MAINTAINER fithwum
 
 ENV ACCEPT_EULA="false"
-ENV GAME_PORT=25565
+ENV GAME_PORT=25555
 
 # URL's for files
 ARG INSTALL_SCRIPT=https://raw.githubusercontent.com/fithwum/minecraft/master/files/Install_Script.sh
@@ -24,7 +24,7 @@ RUN chmod +x /MCtemp/Install_Script.sh
 VOLUME /MCserver
 
 # 25565 default.
-EXPOSE 25565/udp 25565/tcp
+EXPOSE 25555/udp 25555/tcp
 
 # Run command
 CMD [ "/bin/bash", "./MCtemp/Install_Script.sh" ]
